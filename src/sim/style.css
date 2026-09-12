@@ -1,0 +1,318 @@
+.sim-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--color-bg, #0b0d10);
+  color: var(--color-fg, #e8eaed);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  touch-action: none;
+}
+
+.sim-root canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sim-root button:not(:disabled),
+.sim-root [role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
+.sim-home {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  overflow-y: auto;
+  background: var(--color-bg, #0b0d10);
+  padding: 1.5rem 1rem;
+}
+
+.sim-home-inner {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.sim-kicker {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted, #9aa3ad);
+}
+
+.sim-home h1 {
+  margin: 0.25rem 0 0;
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.sim-lead {
+  margin: 0.5rem 0 0;
+  max-width: 36rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-muted, #9aa3ad);
+}
+
+.sim-modes {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .sim-modes {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sim-home {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.sim-mode {
+  border: 1px solid var(--color-border, #2a313a);
+  background: var(--color-surface, #14171c);
+  color: inherit;
+  text-align: left;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.sim-mode:hover {
+  border-color: var(--color-accent, #8fb4c4);
+  background: var(--color-elevated, #1c2128);
+}
+
+.sim-mode h2 {
+  margin: 0.25rem 0 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.sim-mode p {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-muted, #9aa3ad);
+}
+
+.sim-mode .keys {
+  margin-top: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  color: var(--color-subtle, #6b7380);
+}
+
+.sim-header {
+  pointer-events: none;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem;
+}
+
+.sim-chip {
+  border: 1px solid var(--color-border, #2a313a);
+  background: color-mix(in srgb, var(--color-surface, #14171c) 90%, transparent);
+  color: var(--color-accent, #8fb4c4);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+}
+
+.sim-hud {
+  margin-top: 0.35rem;
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+}
+
+.sim-tools {
+  position: absolute;
+  top: 3.5rem;
+  left: 0.75rem;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sim-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border, #2a313a);
+  background: color-mix(in srgb, var(--color-surface, #14171c) 92%, transparent);
+  color: var(--color-fg, #e8eaed);
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sim-icon.is-on {
+  border-color: var(--color-accent, #8fb4c4);
+  color: var(--color-accent, #8fb4c4);
+}
+
+.sim-panel {
+  position: absolute;
+  top: 4rem;
+  right: 0.75rem;
+  z-index: 40;
+  width: min(20rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 6rem);
+  overflow-y: auto;
+  border: 1px solid var(--color-border, #2a313a);
+  background: var(--color-surface, #14171c);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+}
+
+.sim-panel h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.sim-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.sim-close {
+  border: 0;
+  background: none;
+  color: var(--color-muted, #9aa3ad);
+  font-size: 0.75rem;
+}
+
+.sim-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted, #9aa3ad);
+  margin: 0.5rem 0 0.4rem;
+}
+
+.sim-btns {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.sim-btns.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sim-btn {
+  flex: 1;
+  min-height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border, #2a313a);
+  background: transparent;
+  color: var(--color-muted, #9aa3ad);
+  font-size: 0.7rem;
+}
+
+.sim-btn.is-on {
+  border-color: var(--color-accent, #8fb4c4);
+  background: var(--color-elevated, #1c2128);
+  color: var(--color-accent, #8fb4c4);
+}
+
+.sim-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.sim-check small {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--color-subtle, #6b7380);
+}
+
+.sim-slider {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.sim-slider span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-muted, #9aa3ad);
+  margin-bottom: 0.35rem;
+}
+
+.sim-slider input {
+  width: 100%;
+  accent-color: var(--color-accent, #8fb4c4);
+}
+
+.sim-hint {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  font-size: 0.7rem;
+  color: var(--color-subtle, #6b7380);
+}
+
+.sim-pad {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  z-index: 40;
+  width: 10rem;
+  height: 10rem;
+}
+
+.sim-pad button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border, #2a313a);
+  background: color-mix(in srgb, var(--color-surface, #14171c) 90%, transparent);
+  color: var(--color-fg, #e8eaed);
+}
+
+.sim-binocs {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: radial-gradient(circle at center, transparent 38%, rgb(6 8 12 / 0.55) 52%, rgb(6 8 12 / 0.92) 68%);
+}
+
+.sim-binocs p {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  color: var(--color-accent, #8fb4c4);
+}
+
+.hidden {
+  display: none !important;
+}

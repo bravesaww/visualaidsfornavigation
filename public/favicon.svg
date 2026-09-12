@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <rect width="16" height="16" rx="3" fill="#0b0d10"/>
+  <!-- runway, top-down -->
+  <rect x="7" y="2" width="6" height="12" fill="#c5ced6"/>
+  <rect x="9" y="3" width="1" height="2" fill="#0b0d10"/>
+  <rect x="9" y="6" width="1" height="2" fill="#0b0d10"/>
+  <rect x="9" y="9" width="1" height="2" fill="#0b0d10"/>
+  <!-- threshold cyan -->
+  <rect x="7" y="13" width="6" height="1" fill="#7ec8d8"/>
+  <!-- control tower -->
+  <rect x="2" y="7" width="3" height="6" fill="#9aa4b2"/>
+  <rect x="1" y="6" width="5" height="2" fill="#9aa4b2"/>
+  <rect x="3" y="3" width="1" height="3" fill="#7ec8d8"/>
+</svg>

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aerodrome 09",
+      "hasCanvas": true,
+      "bodyTextLen": 544,
+      "bodyTextHash": "54ac950e36b2f3521b61829d87f9c5c1868ecbbdddd61b51a66f07f8921573c5",
+      "bodyTextPrefix": "VISUAL NAVIGATION Aerodrome 09 Four views of the ICAO field. Pic",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aerodrome 09",
+      "hasCanvas": true,
+      "bodyTextLen": 544,
+      "bodyTextHash": "54ac950e36b2f3521b61829d87f9c5c1868ecbbdddd61b51a66f07f8921573c5",
+      "bodyTextPrefix": "VISUAL NAVIGATION Aerodrome 09 Four views of the ICAO field. Pic",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
